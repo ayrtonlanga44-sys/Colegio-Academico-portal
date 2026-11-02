@@ -1,8 +1,7 @@
 export const SCHOOL_WHATSAPP =
   process.env.NEXT_PUBLIC_SCHOOL_WHATSAPP ?? "258825897409";
 
-export const CLASS_GROUPS = ["10A", "11A", "12A", "12B"] as const;
-
+export const CLASS_GROUPS = ["10ª", "11ªA", "12ª"] as const;
 export type ClassGroup = (typeof CLASS_GROUPS)[number];
 
 export const NOTICE_PRIORITIES = [
@@ -11,7 +10,6 @@ export const NOTICE_PRIORITIES = [
   "Fardamento",
   "Geral",
 ] as const;
-
 export type NoticePriority = (typeof NOTICE_PRIORITIES)[number];
 
 export const PRIORITY_META: Record<
@@ -45,7 +43,6 @@ export const SUGGESTION_STATUSES = [
   "Aprovado pela Direcção",
   "Em Implementação",
 ] as const;
-
 export type SuggestionStatus = (typeof SUGGESTION_STATUSES)[number];
 
 export const STATUS_META: Record<SuggestionStatus, string> = {
@@ -68,5 +65,11 @@ export const ROLE_LABEL = {
   delegate: "Delegado de Turma",
   admin: "Direcção",
 } as const;
-
 export type Role = keyof typeof ROLE_LABEL;
+
+export const SCHOOL_RULES = [
+  "Cartão obrigatório à entrada e nas provas.",
+  "Fardamento oficial verde e branco completo.",
+  "Telemóveis desligados em sala de aula.",
+  "Respeito por colegas, professores e funcionários.",
+];

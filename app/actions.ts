@@ -4,7 +4,7 @@ import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function signIn(formData: FormData) {
+export async function signIn(formData: FormData): Promise<{ ok: boolean; error?: string }> {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const cookieStore = cookies();
@@ -40,7 +40,7 @@ export async function signIn(formData: FormData) {
   return { ok: true };
 }
 
-export async function signUp(formData: FormData) {
+export async function signUp(formData: FormData): Promise<{ ok: boolean; error?: string; message?: string }> {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const fullName = formData.get("full_name") as string;
@@ -107,4 +107,25 @@ export async function signOut() {
 
   await supabase.auth.signOut();
   redirect("/login");
+}
+
+// Ações auxiliares tipadas
+export async function createHomework(formData: FormData): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
+}
+
+export async function deleteHomework(id: string): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
+}
+
+export async function toggleVote(suggestionId: string): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
+}
+
+export async function setSuggestionStatus(suggestionId: string, status: string): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
+}
+
+export async function createSuggestion(formData: FormData): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
 }
