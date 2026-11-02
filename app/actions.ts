@@ -109,7 +109,7 @@ export async function signOut() {
   redirect("/login");
 }
 
-// Ações auxiliares tipadas
+// Ações auxiliares tipadas com { ok: boolean; error?: string }
 export async function createHomework(formData: FormData): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
@@ -118,7 +118,7 @@ export async function deleteHomework(id: string): Promise<{ ok: boolean; error?:
   return { ok: true };
 }
 
-export async function toggleVote(suggestionId: string): Promise<{ ok: boolean; error?: string }> {
+export async function toggleVote(suggestionId: string, hasVoted?: boolean): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
 
@@ -129,6 +129,7 @@ export async function setSuggestionStatus(suggestionId: string, status: string):
 export async function createSuggestion(formData: FormData): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
+
 export async function createNotice(formData: FormData): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
