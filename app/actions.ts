@@ -129,3 +129,10 @@ export async function setSuggestionStatus(suggestionId: string, status: string):
 export async function createSuggestion(formData: FormData): Promise<{ ok: boolean; error?: string }> {
   return { ok: true };
 }
+export async function createNotice(formData: FormData): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
+}
+
+export async function deleteNotice(id: string): Promise<{ ok: boolean; error?: string }> {
+  return { ok: true };
+}
