@@ -28,19 +28,30 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Efeitos de fundo subtis em verde institucional */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#00A651]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden bg-slate-950">
+      {/* Imagem de Fundo Institucional com Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-0 opacity-25 filter blur-[2px]"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1920&auto=format&fit=crop')` 
+          /* Podes trocar o link acima pela imagem real da escola alojada em /public ou via URL */
+        }}
+      />
+
+      {/* Gradiente de sobreposição para leitura perfeita */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/90 to-slate-900/80 z-0" />
+
+      {/* Efeitos de luz subtis em verde institucional */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#00A651]/20 rounded-full blur-3xl pointer-events-none z-0" />
+      <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none z-0" />
 
       <div className="w-full max-w-md relative z-10">
         {/* Cartão de Login com Glassmorphism */}
-        <div className="bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 shadow-2xl space-y-6">
+        <div className="bg-slate-900/85 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-8 shadow-2xl space-y-6">
           
           {/* Cabeçalho / Logótipo */}
           <div className="text-center space-y-3">
             <div className="w-16 h-16 mx-auto rounded-2xl bg-[#00A651]/10 border border-[#00A651]/30 flex items-center justify-center shadow-inner">
-              {/* Podes substituir pela tag <img> se preferires usar o public/logo.png */}
               <Sparkles className="w-8 h-8 text-[#00A651]" />
             </div>
             <div>
