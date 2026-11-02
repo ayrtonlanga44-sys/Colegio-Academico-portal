@@ -1,6 +1,8 @@
 export const SCHOOL_WHATSAPP =
   process.env.NEXT_PUBLIC_SCHOOL_WHATSAPP ?? "258825897409";
 
+export const SCHOOL_PHONE_DISPLAY = "+258 82 589 7409";
+
 export const CLASS_GROUPS = ["10ª", "11ªA", "12ª"] as const;
 export type ClassGroup = (typeof CLASS_GROUPS)[number];
 
