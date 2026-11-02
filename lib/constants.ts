@@ -16,4 +16,4 @@ export const SCHOOL_RULES = [
 
 export const CLASS_GROUPS = ["10A", "11A", "12A", "12B"] as const;
 
-export type ClassGroup = (typeof CLASS_GROUPS)[number];// deploy fix 
+export type ClassGroup = (typeof CLASS_GROUPS)[number];
